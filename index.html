@@ -13,12 +13,13 @@
 
     </div>
 
-    <div class="img-gallery">
-        <img src="images/img1.png" onclick="openFullImg(this.src)">
-        <img src="images/img2.jpg" onclick="openFullImg(this.src)">
-        <img src="images/img3.jpg" onclick="openFullImg(this.src)">
-        <img src="images/img4.jpg" onclick="openFullImg(this.src)">
-        <img src="images/img5.jpg" onclick="openFullImg(this.src)">
+    <div class="img-gallery" id="img-gallery">
+        <img src="img1.png" onclick="openFullImg(this.src)">
+        <img src="img2.jpg" onclick="openFullImg(this.src)">
+        <img src="img3.jpg" onclick="openFullImg(this.src)">
+        <img src="img4.jpg" onclick="openFullImg(this.src)">
+        <img src="img5.webp" onclick="openFullImg(this.src)">
+        <img src="img6.jpg" onclick="openFullImg(this.src)">
 
     </div>
     <script>
@@ -28,9 +29,11 @@
         function openFullImg(pic){
             fullImgBox.style.display ="flex"
             fullImg.src = pic;
+            document.getElementById("img-gallery").style.display="none";
         }
         function closeFullImg(){
             fullImgBox.style.display ="none"
+            document.getElementById("img-gallery").style.display="block";
         }
 
     </script>
